@@ -18,7 +18,7 @@ export default function App() {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     fetch("/server", {
-      method: "POST",
+      method: "GET",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),
     })
