@@ -43,7 +43,7 @@ export default async function createPaymentIntent(req, res) {
 
   const customer = await stripe.customers.create();
   console.log(calculateOrderAmount(items));
-
+  console.log("HERE");
   // Create a PaymentIntent with the order amount and currency
   const paymentIntent = await stripe.paymentIntents.create({
     customer: customer.id,
@@ -51,7 +51,7 @@ export default async function createPaymentIntent(req, res) {
     currency: "cad",
     payment_method_types: ['card', 'affirm', 'klarna'],
   });
-  console.log("HERE");
+  
   res.send({
     clientSecret: paymentIntent.client_secret,
   });
