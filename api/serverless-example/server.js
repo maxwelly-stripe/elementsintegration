@@ -8,6 +8,10 @@ const stripe = require("stripe")('sk_test_51NO1YjH5aAv8RRbVCXD10oGtuWgqCXWpGE0hz
 app.use(express.static("public"));
 app.use(express.json());
 
+export const config = {
+  runtime: 'edge',
+};
+
 const calculateOrderAmount = (items) => {
   // Replace this constant with a calculation of the order's amount
   // Calculate the order total on the server to prevent
