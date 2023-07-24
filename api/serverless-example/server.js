@@ -1,12 +1,7 @@
-const express = require("express");
-const app = express();
 // This is a public sample test API key.
 // Don’t submit any personally identifiable information in requests made with this key.
 // Sign in to see your own test API key embedded in code samples.
 const stripe = require("stripe")('sk_test_51NO1YjH5aAv8RRbVCXD10oGtuWgqCXWpGE0hzLjbKKUsYn6YNAVcVM6FMF5pEw9ngt7POXS1haYaJgNLdh2phQ7H00yj5kztSe');
-
-app.use(express.static("public"));
-app.use(express.json());
 
 export const config = {
   runtime: 'edge',
