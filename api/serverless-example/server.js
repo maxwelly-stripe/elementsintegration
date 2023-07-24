@@ -38,7 +38,7 @@ const chargeCustomer = async (customerId) => {
     }
   };
 
-app.post("/create-payment-intent", async (req, res) => {
+export default async function createPaymentIntent(req, res) {
   const { items } = req.body;
 
   const customer = await stripe.customers.create();
@@ -51,10 +51,8 @@ app.post("/create-payment-intent", async (req, res) => {
     currency: "cad",
     payment_method_types: ['card', 'affirm', 'klarna'],
   });
-
+  console.log("HERE");
   res.send({
     clientSecret: paymentIntent.client_secret,
   });
-});
-
-app.listen(4242, () => console.log("Node server listening on port 4242!"));
+}
