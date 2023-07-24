@@ -38,7 +38,7 @@ const chargeCustomer = async (customerId) => {
     }
   };
 
-export default async function createPaymentIntent(req, res) {
+export default async function server(req, res) {
   const { items } = req.body;
 
   const customer = await stripe.customers.create();
