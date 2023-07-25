@@ -27,7 +27,6 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://elementsintegrationserver-5gux.vercel.app/",
   "browserslist": {
     "production": [
       ">0.2%",
