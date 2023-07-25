@@ -5,8 +5,6 @@ const app = express();
 // Sign in to see your own test API key embedded in code samples.
 const stripe = require("stripe")('sk_test_51NO1YjH5aAv8RRbVCXD10oGtuWgqCXWpGE0hzLjbKKUsYn6YNAVcVM6FMF5pEw9ngt7POXS1haYaJgNLdh2phQ7H00yj5kztSe');
 
-app.use(express.json());
-
 const calculateOrderAmount = (items) => {
   // Replace this constant with a calculation of the order's amount
   // Calculate the order total on the server to prevent
