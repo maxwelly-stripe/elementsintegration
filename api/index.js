@@ -38,6 +38,11 @@ const chargeCustomer = async (customerId) => {
     }
   };
 
+app.get('/test', (req, res) => {
+  console.log(req);
+  res.sendStatus(200);
+})
+
 app.post("/create-payment-intent", async (req, res) => {
   const { items } = req.body;
 
